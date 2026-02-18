@@ -266,7 +266,7 @@ export function WhatsAppChatBot() {
             )}
 
             {/* Quick options for service question */}
-            {currentQuestion?.options && !redirecting && (
+            {currentQuestion && "options" in currentQuestion && currentQuestion.options && !redirecting && (
               <div className="px-2 pb-2 flex flex-wrap gap-1.5">
                 {currentQuestion.options.map((opt) => (
                   <button
